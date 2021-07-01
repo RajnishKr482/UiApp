@@ -3,8 +3,9 @@ import {StyleSheet, Text, View, Image, StatusBar} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {Avatar} from 'react-native-paper';
+import DropDownPicker from 'react-native-dropdown-picker';
 // import {Picker} from '@react-native-picker/picker';
-// import DropDownPicker from 'react-native-dropdown-picker';
+// import ModalDropDown from 'react-native-modal-dropdown';
 
 const ThirdScreen = () => {
   const [toggleBox, setToggleBox] = useState(false);
@@ -90,7 +91,16 @@ const ThirdScreen = () => {
             <Picker.Item label="java" value="java" />
           </Picker> */}
         </View>
-        <View>{/* <DropDownPicker /> */}</View>
+        <View>
+          <DropDownPicker
+            open={open}
+            value={value}
+            items={items}
+            setOpen={() => setOpen(!open)}
+            setValue={setValue}
+            setItems={setItems}
+          />
+        </View>
       </View>
     </View>
   );
