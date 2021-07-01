@@ -140,7 +140,7 @@ const HomeDetailed = () => {
                   source={require('../../assets/pic/suger.png')}
                 />
                 <CheckBox
-                  tintColor="black"
+                  tintColors="red"
                   boxType="circle"
                   value={toggleBox}
                   onValueChange={() => setToggleBox(!toggleBox)}
